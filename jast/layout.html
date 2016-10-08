@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8">
+    {{ metatags }}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block htmltitle %}
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+    {% for cssfile in css_files %}
+    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+    {% endfor %}
+    {% for cssfile in extra_css_files %}
+    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+    {% endfor %}
+
+    {%- block linktags %}
+        {%- if hasdoc('about') %}
+    <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}"/>
+        {%- endif %}
+        {%- if hasdoc('genindex') %}
+    <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}"/>
+        {%- endif %}
+        {%- if hasdoc('search') %}
+    <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}"/>
+        {%- endif %}
+        {%- if hasdoc('copyright') %}
+    <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}"/>
+        {%- endif %}
+    <link rel="top" title="{{ docstitle|e }}" href="{{ pathto('index') }}"/>
+        {%- if parents %}
+    <link rel="up" title="{{ parents[-1].title|striptags|e }}" href="{{ parents[-1].link|e }}"/>
+        {%- endif %}
+        {%- if next %}
+    <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}"/>
+        {%- endif %}
+        {%- if prev %}
+    <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}"/>
+        {%- endif %}
+    {%- endblock %}
+    {%- block extrahead %} {% endblock %}
+</head>
+
+<body role="document">
+    {% block extrabody %} {% endblock %}
+
+    {% include "sidebar.html" %}
+
+    <main class="site-main" role="main">
+        {% include "breadcrumbs.html" %}
+        <section class="site-content">
+            <div class="container">
+                {% block body %}{% endblock %}
+            </div>
+        </section>
+
+        {% if next or prev %}
+            <nav class="site-bottom-navigation" role="navigation">
+            {% if next %}
+                <a href="{{ next.link|e }}" class="btn btn--primary btn--next right"
+                    title="{{ next.title|striptags|e }}" accesskey="n">
+                    Next
+                </a>
+            {% endif %}
+            {% if prev %}
+                <a href="{{ prev.link|e }}" class="btn btn--primary btn--prev"
+                    title="{{ prev.title|striptags|e }}" accesskey="p">
+                    Previous
+                </a>
+            {% endif %}
+            </nav>
+        {% endif %}
+
+    </main>
+
+    {% include "footer.html" %}
+    {% include "versions.html" %}
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'{{ url_root }}',
+            VERSION:'{{ release|e }}',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'{{ '' if no_search_suffix else file_suffix }}',
+            HAS_SOURCE:  {{ has_source|lower }}
+        };
+    </script>
+{%- for scriptfile in script_files %}
+    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+{%- endfor %}
+    <script type="text/javascript" src="{{ pathto('_static/js/theme-min.js', 1) }}"></script>
+{%- block footer %} {% endblock %}
+</body>
+</html>

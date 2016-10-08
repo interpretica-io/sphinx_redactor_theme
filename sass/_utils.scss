@@ -1,0 +1,39 @@
+
+@function calculate-rem($size) {
+    @if $size != null {
+        @return ($size / 16) + rem;
+    } @else {
+        @return null;
+    }
+}
+
+@function calulate-px($size) {
+    @if $size != null {
+        @return ($size) + px;
+    } @else {
+        @return null;
+    }
+}
+
+
+// scss-lint:disable DuplicateProperty
+@mixin font-size($size) {
+    font-size: $size + px;
+    font-size: calculate-rem($size);
+}
+// scss-lint:enable DuplicateProperty
+
+@mixin clearfix {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.right {
+    float: right;
+}
+
+.jast-responsive-table {
+    padding-bottom: 10px;
+    overflow-x: auto;
+}

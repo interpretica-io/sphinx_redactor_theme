@@ -1,0 +1,47 @@
+
+<a href="#" id="js-navigation-toggle" class="navigation-toggle">
+    <i class="mdi mdi-menu"></i><i class="mdi mdi-close"></i>
+</a>
+
+<section class="site-sidebar">
+
+<nav>
+{% block sidebartitle %}
+
+    <a href="{{ pathto(master_doc) }}" class="branding-link">
+    {% if logo and theme_logo_only %}
+    {% else %}
+        {{ project }}
+    {% endif %}
+    {% if logo %}
+        <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" />
+    {% endif %}
+    {% if theme_display_version %}
+        {%- set nav_version = version %}
+        {% if READTHEDOCS and current_version %}
+            {%- set nav_version = current_version %}
+        {% endif %}
+        {% if nav_version %}
+            <span class="branding-link__version">
+                {{ nav_version }}
+            </span>
+        {% endif %}
+    {% endif %}
+    </a>
+
+    {% include "searchbox.html" %}
+{% endblock %}
+
+{% block menu %}
+    <section class="site-nav">
+    {% set toctree = toctree(maxdepth=theme_navigation_depth, collapse=True, includehidden=True) %}
+    {% if toctree %}
+        {{ toctree }}
+    {% else %}
+        <div>{{ toc }}</div>
+    {% endif %}
+    </section>
+{% endblock %}
+</nav>
+
+</section>

@@ -1,0 +1,302 @@
+body {
+    @include font-size(14);
+    font-family: $main-font;
+    background: $wild-sand;
+    color: $mine-shaft;
+    font-weight: 400;
+    letter-spacing: .5px;
+    line-height: 1.5;
+
+    &:after {
+        @include clearfix();
+    }
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: underline;
+    color: $palette1;
+
+    &:hover {
+        color: $palette2;
+    }
+}
+
+.site-content a {
+    &:hover .literal {
+        color: $palette2;
+    }
+
+    .literal {
+        color: $palette1;
+    }
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+hr {
+    height: 2px;
+    background: $iron;
+    border: 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: - .25em;
+}
+
+sup {
+    top: - .25em;
+}
+
+.headerlink {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-200%);
+    transition: all .3s ease;
+    margin-left: $gutter / 2;
+    text-decoration: none;
+}
+
+%heading {
+    font-family: $heading-font;
+    position: relative;
+    background: $white;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    overflow-wrap: normal;
+    font-weight: 700;
+
+    .toc-backref {
+        color: $mine-shaft;
+        text-decoration: none;
+    }
+
+    &:hover {
+        .headerlink {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        &:after {
+            margin-left: 1rem;
+        }
+    }
+
+    &:after {
+        transition: all .3s ease;
+        content: "";
+        top: -1px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        height: 2px;
+        line-height: 0;
+        margin-left: - .5rem;
+        background: $silver;
+    }
+
+    @media only screen and (max-width: $screen-s) {
+        white-space: normal;
+
+        &:after {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
+
+@mixin make_h1 {
+    @extend %heading;
+    @include font-size(32);
+}
+
+@mixin make_h2 {
+    @extend %heading;
+    @include font-size(26);
+}
+
+@mixin make_h3 {
+    @extend %heading;
+    @include font-size(22);
+}
+
+@mixin make_h4 {
+    @extend %heading;
+    @include font-size(18);
+}
+
+@mixin make_h5 {
+    @extend %heading;
+    @include font-size(16);
+}
+
+h1 {
+    @include make_h1;
+}
+
+h2 {
+    @include make_h2;
+}
+
+h3 {
+    @include make_h3;
+}
+
+h4 {
+    @include make_h4;
+}
+
+h5 {
+    @include make_h5;
+}
+
+h1:hover .headerlink {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.site-content {
+    .section {
+        &:before,
+        &:after {
+            @include clearfix();
+        }
+    }
+
+    #search-results > * + *,
+    .section > * + *,
+    .section + .section,
+    * + .section {
+        margin-top: $gutter;
+    }
+
+    @media only screen and (max-width: $screen-s) {
+        .math {
+            overflow-x: auto;
+        }
+    }
+}
+
+p {
+    line-height: 1.5;
+}
+
+table {
+    text-align: left;
+    border-radius: 8px;
+    background: $wild-sand;
+    overflow: hidden;
+
+    .row-odd td {
+        background: darken($wild-sand, 3);
+    }
+
+    &.docutils td {
+        vertical-align: middle;
+    }
+}
+
+thead tr + tr th {
+    border-top: 1px solid darken($palette1, 8);
+}
+
+td, th {
+    padding: 15px $gutter;
+    line-height: 1;
+    word-wrap: break-word;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+th {
+    background: $palette1;
+    color: $white;
+    font-weight: 700;
+}
+
+td {
+    border-bottom: 1px solid rgba($iron, .2);
+}
+
+.site-content ul,
+.site-content ol {
+    line-height: 1.8;
+}
+
+ol {
+    list-style: decimal;
+
+    &.loweralpha {
+        list-style: lower-alpha;
+    }
+
+    &.lowerroman {
+        list-style: lower-roman;
+    }
+
+    &.upperalpha {
+        list-style: upper-alpha;
+    }
+
+    &.upperroman {
+        list-style: upper-roman;
+    }
+}
+
+ul {
+    list-style-type: square;
+    line-height: 1.5;
+
+    > li {
+        margin-right: 0;
+    }
+}
+
+li {
+    margin-left: $gutter;
+}
+
+.site-content dl {
+    dt {
+        font-weight: 700;
+    }
+
+    dd {
+        margin: 0 0 $gutter $gutter;
+    }
+}
+
+.site-content .line-block {
+    margin-left: $gutter;
+}
+
+.site-content blockquote {
+    margin: 0 0 $gutter $gutter;
+
+    .attribution {
+        font-style: italic;
+        color: $beast;
+        margin-top: $gutter / 2;
+    }
+}

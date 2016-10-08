@@ -1,0 +1,648 @@
+////////////
+// sidebar toctree
+
+.site-sidebar {
+    background: $wild-sand;
+    padding: $gutter2x 5%;
+    float: right;
+    width: 40%;
+
+    a {
+        transition: background .2s;
+
+        &:hover {
+            background: darken($wild-sand, 5);
+        }
+    }
+}
+
+.branding-link {
+    transition: background .2s, color .2s;
+    display: block;
+    text-decoration: none;
+    padding: $gutter;
+}
+
+.branding-link__version {
+    @include font-size(12);
+    display: block;
+    color: $mine-shaft;
+}
+
+.site-searchform {
+    margin-top: $gutter;
+
+    [type=text] {
+        @include font-size(18);
+        transition: border-color .2s, box-shadow .2s;
+        border-style: solid;
+        border-width: 2px;
+        border-color: $palette1;
+        font-family: $main-font;
+        width: 100%;
+        outline: 0;
+        padding: 10px 5px;
+
+        &:focus {
+            box-shadow: 0 0 4px 0 rgba($palette2, .4);
+            border-color: $palette2;
+        }
+    }
+}
+
+* + .site-nav {
+    margin-top: $gutter;
+}
+
+.site-nav {
+    @include font-size(13);
+
+    > .caption {
+        border-top: 2px solid $palette1;
+        padding: $gutter / 2;
+        margin-top: $gutter2x;
+        font-weight: 700;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    li {
+        list-style-type: none;
+        line-height: 1;
+
+        &.toctree-l1 {
+            margin-left: 0;
+        }
+
+        a {
+            display: block;
+            padding: $gutter / 2;
+        }
+    }
+}
+
+// sidebar
+////////////
+
+////////////
+// search
+
+.site-search-results {
+    h2:after {
+        margin-left: 1rem;
+    }
+
+    .search {
+        padding: $gutter2x 0;
+
+        li {
+            list-style-type: none;
+            border-top: 2px solid $silver;
+            margin-left: 0;
+        }
+
+        a {
+            @include font-size(18);
+            text-decoration: none;
+            display: block;
+            padding: $gutter;
+
+            &:hover {
+                background: $wild-sand;
+            }
+        }
+    }
+}
+
+// search
+////////////
+
+////////////
+// breadcrumbs
+
+.site-breadcrumbs {
+    margin-bottom: $gutter2x;
+    color: $iron;
+
+    &:before,
+    &:after {
+        @include clearfix();
+    }
+
+    li {
+        display: inline-block;
+        margin-left: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.site-breadcrumbs__leaf {
+    color: $mine-shaft;
+}
+
+.site-breadcrumbs__right {
+    float: right;
+}
+
+// breadcrumbs
+////////////
+
+////////////
+// main
+
+.site-main {
+    padding: $gutter2x 10%;
+    float: left;
+    width: 60%;
+    background: $white;
+}
+
+// main
+////////////
+
+////////////
+// tables
+
+.field-list {
+    @include font-size(13);
+
+    th, td {
+        padding: 10px;
+        line-height: 1;
+
+        p {
+            line-height: 1;
+        }
+    }
+
+    th {
+        background: transparent;
+        color: $mine-shaft;
+        text-align: right;
+        vertical-align: top;
+    }
+
+    td {
+        border-bottom: 0;
+        white-space: normal;
+    }
+}
+
+.field-name {
+    font-weight: 700;
+}
+
+// tables
+////////////
+
+////////////
+// TOC
+
+.site-content .topic-title {
+    @include make_h4();
+
+    &:after {
+        display: none;
+        visibility: hidden;
+    }
+
+    + .auto-toc {
+        margin-top: $gutter;
+    }
+}
+
+.toctree-wrapper,
+.auto-toc {
+    a {
+        text-decoration: none;
+    }
+
+    .caption {
+        @include make_h3();
+    }
+}
+
+// TOC
+////////////
+
+////////////
+// dl code
+
+.site-content dl:not(.docutils) {
+    dt {
+        border-radius: 4px;
+        background: $wild-sand;
+        padding: 15px 20px;
+        margin-bottom: $gutter;
+        color: $palette2;
+        letter-spacing: .5px;
+    }
+
+    dd {
+        margin-left: $gutter2x;
+
+        p {
+            margin-bottom: $gutter / 2;
+        }
+
+        th {
+            background: $palette1;
+            color: $white;
+        }
+
+        > [class^=highlight] {
+            margin-bottom: $gutter;
+        }
+    }
+
+    .property,
+    .descname {
+        margin-right: 5px;
+    }
+
+    .descclassname,
+    .descname {
+        color: $palette1;
+        font-weight: 700;
+    }
+
+    .optional {
+        color: $mine-shaft;
+        padding: 0 3px;
+    }
+}
+
+// dl code
+////////////
+
+////////////
+// code blocks
+
+.codeblock,
+.site-content .literal-block,
+.site-content .literal-block,
+[class^='highlight'] {
+    font-family: $mono-font;
+    border-radius: 4px;
+    padding: $gutter;
+    overflow-x: auto;
+    background: $wild-sand;
+
+    [class^='highlight'] {
+        padding: 0;
+    }
+
+    td {
+        border: 0;
+        padding: 0 $gutter 0 0;
+        line-height: 1.4;
+    }
+}
+
+table [class^='highlight'] {
+    overflow: visible;
+}
+
+.site-content .literal {
+    border-radius: 4px;
+    font-family: $mono-font;
+    background: $wild-sand;
+    padding: 4px;
+    color: $black;
+}
+
+.highlighted {
+    background: transparent;
+    font-family: $mono-font;
+    padding: 0 2px;
+}
+
+// code blocks
+////////////
+
+////////////
+// sidebar
+
+.site-content {
+    .sidebar {
+        border-radius: 4px;
+        float: right;
+        width: 40%;
+        padding: 0;
+        display: block;
+        margin: 0 0 $gutter $gutter;
+        border: 2px solid $palette1;
+        background: $white;
+
+        > * {
+            padding: 0 $gutter;
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        @media only screen and (max-width: $screen-s) {
+            width: 100%;
+            float: none;
+            margin: 0 0 $gutter 0;
+        }
+    }
+
+    .sidebar-title {
+        padding: $gutter / 2 $gutter;
+        background: $palette1;
+        color: $white;
+    }
+}
+
+// sidebar
+////////////
+
+////////////
+// admonitions
+
+@mixin admon($c, $i) {
+    border-color: $c;
+    background-color: rgba($c, .15);
+
+    .admonition-title:before {
+        content: mdi($i);
+        color: $c;
+    }
+}
+
+.admonition {
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 2px;
+    padding: $gutter $gutter $gutter $gutter3x;
+    position: relative;
+
+    .admonition-title {
+        position: absolute;
+        top: $gutter;
+        left: 18px;
+        font-size: 0;
+
+        &:before {
+            @include font-size(24);
+            line-height: 1;
+            font-family: "Material Design Icons";
+        }
+    }
+
+    &.tip,
+    &.hint,
+    &.important {
+        @include admon($tip, "information");
+    }
+
+    &.note {
+        @include admon($note, "information");
+    }
+
+    &.danger,
+    &.error {
+        @include admon($danger, "alert-circle");
+    }
+
+    &.warning,
+    &.attention,
+    &.caution {
+        @include admon($warning, "alert");
+    }
+}
+
+// admonitions
+////////////
+
+////////////
+// footnote and citation
+
+.site-content .footnote-reference,
+.site-content .citation-reference {
+    vertical-align: super;
+    font-size: 90%;
+    text-decoration: none;
+}
+
+.site-content .footnote {
+    width: 100%;
+
+    td {
+        white-space: normal;
+
+        &.label {
+            width: $gutter2x;
+            vertical-align: top;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .label + td {
+        @include font-size(12);
+        color: darken($beast, 10);
+        line-height: 1.2;
+    }
+}
+
+// footnote and citation
+////////////
+
+////////////
+// figure
+
+.site-content .figure .caption {
+    font-style: italic;
+}
+
+// figure
+////////////
+
+////////////
+// xref
+
+.site-content .download {
+    padding: 0;
+    background: $white;
+    color: $palette1;
+    font-family: $main-font;
+    position: relative;
+    display: inline-block;
+    padding-left: 34px;
+
+    &:before {
+        @include font-size(24);
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: "Material Design Icons";
+        content: mdi("download");
+        color: $palette1;
+    }
+
+    *:before {
+        display: none;
+        visibility: hidden;
+        content: "";
+    }
+
+    .download {
+        padding-left: 0;
+    }
+}
+
+// xref
+////////////
+
+////////////
+// site bottom
+
+.site-bottom-navigation {
+    margin: $gutter4x 0;
+
+    &:after {
+        @include clearfix();
+    }
+}
+
+// site bottom
+////////////
+
+////////////
+// site footer
+
+.site-footer {
+    @include clearfix();
+    background-color: $palette1;
+    padding: $gutter4x;
+    text-align: center;
+    color: $iron;
+    display: block;
+
+    a {
+        color: $white;
+
+        &:hover {
+            color: $iron;
+        }
+    }
+
+    &:after,
+    &:before {
+        @include clearfix();
+    }
+}
+
+// site bottom
+////////////
+
+////////////
+// mobile menu
+
+.navigation-toggle {
+    @include font-size(24);
+    padding: $gutter;
+    border-radius: 0 0 0 $gutter / 2;
+    color: $palette1;
+    background: rgba($white, .8);
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    line-height: 1;
+    z-index: 2;
+    text-decoration: none;
+
+    i:last-child {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.mobile-menu-open {
+    .site-main {
+        transform: translateX(-90%);
+    }
+
+    .site-sidebar {
+        transform: translateX(0%);
+    }
+
+    .navigation-toggle {
+        background: rgba($wild-sand, .8);
+
+        i:first-child {
+            display: none;
+            visibility: hidden;
+        }
+
+        i:last-child {
+            display: block;
+            visibility: visible;
+        }
+    }
+}
+
+// mobile menu
+/////////////
+
+// media queries for main and sidebar
+@media only screen and (max-width: 1200px) {
+    .site-main {
+        width: 70%;
+        padding: $gutter2x 5%;
+    }
+
+    .site-sidebar {
+        width: 30%;
+        padding: $gutter2x 5%;
+    }
+}
+
+@media only screen and (max-width: $screen-m) {
+    body,
+    html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    body {
+        position: relative;
+    }
+
+    .navigation-toggle {
+        transition: all .2s;
+        display: block;
+    }
+
+    .site-breadcrumbs__right {
+        float: none;
+        display: block !important;
+    }
+
+    .site-main {
+        transition: transform .2s ease;
+        width: 100%;
+        padding: $gutter2x 5%;
+    }
+
+    .site-sidebar {
+        transition: transform .2s ease;
+        transform: translateX(100%);
+        position: absolute;
+        width: 90%;
+        z-index: 1;
+        right: 0;
+    }
+}

@@ -1,0 +1,40 @@
+
+$black:         #000;
+$mine-shaft:    #2a2a2a;
+$beast:         #666;
+$iron:          #aaa;
+$silver:        #f0f0f0;
+$wild-sand:     #f8f8f8;
+$white:         #fff;
+$topo:          #ccc;
+$red:           #ff5252;
+$borraccino:    #139a43;
+$palette1:      #3f1263;
+$palette2:      #b80d57;
+
+$tip:           $borraccino;
+$note:          $palette1;
+$danger:        $red;
+$warning:       #f49e4c;
+
+// the gutter
+
+$gutter: 20px;
+$gutter2x: $gutter * 2;
+$gutter3x: $gutter * 3;
+$gutter4x: $gutter * 4;
+
+// screen size
+
+$screen-s:   580px;
+$screen-m:   980px;
+$screen-l:  1280px;
+$screen-xl: 1680px;
+
+// Fonts
+
+@import "https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,400i,700,700i|Space+Mono:400,700";
+
+$main-font: "Roboto", sans-serif;
+$heading-font: "Roboto Condensed", sans-serif;
+$mono-font: "Space Mono", monospace;
