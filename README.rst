@@ -1,3 +1,6 @@
+.. image:: scrot.jpg
+    :width: 100%
+
 Installation
 ============
 
