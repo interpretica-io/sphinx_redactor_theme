@@ -162,6 +162,14 @@
     background: $white;
 }
 
+.source-link {
+    a {
+        color: $beast;
+        text-style: italic;
+        text-decoration: none;
+    }
+}
+
 // main
 ////////////
 
@@ -646,3 +654,4 @@ table [class^='highlight'] {
         right: 0;
     }
 }
+

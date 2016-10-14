@@ -102,6 +102,7 @@ gulp.task('default', function () {
   gulp.watch(patterns.sass, ['scsslint']);
   gulp.watch(patterns.sass, ['sass']);
   gulp.watch(patterns.css, ['build']);
+  gulp.watch(patterns.templates, ['build']);
   gulp.watch(patterns.js, ['jslint']);
   gulp.watch(patterns.js, ['jscompress']);
 });
