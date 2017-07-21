@@ -43,7 +43,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'JAST theme demo'
-copyright = u'2016, Carlo Ascani'
+copyright = u'2017, TestTheDocs'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
