@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup
-from jast import __version__
+from sphinx_ttd_theme import __version__
 
 
 setup(
-    name='jast',
+    name='sphinx_ttd_theme',
     version=__version__,
     url='https://github.com/carloratm/jast/',
     license='MIT',
@@ -13,8 +13,8 @@ setup(
     description='Just another theme for Sphinx.',
     long_description=open('README.rst').read(),
     zip_safe=False,
-    packages=['jast'],
-    package_data={'jast': [
+    packages=['sphinx_ttd_theme'],
+    package_data={'sphinx_ttd_theme': [
         'theme.conf',
         '*.html',
         'static/css/*.css',
