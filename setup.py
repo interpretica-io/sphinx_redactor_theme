@@ -4,17 +4,17 @@ from sphinx_ttd_theme import __version__
 
 
 setup(
-    name='sphinx_ttd_theme',
+    name='sphinx_redactor_theme',
     version=__version__,
-    url='https://github.com/carloratm/jast/',
+    url='https://github.com/testthedocs/sphinx_redactor_theme',
     license='MIT',
-    author='Carlo Ascani',
-    author_email='carlo.ratm@gmail.com',
-    description='Just another theme for Sphinx.',
+    author='TestTheDocs Community',
+    author_email='info@testthedocs.org',
+    description='Sphinx theme for redactor docs.',
     long_description=open('README.rst').read(),
     zip_safe=False,
-    packages=['sphinx_ttd_theme'],
-    package_data={'sphinx_ttd_theme': [
+    packages=['sphinx_redactor_theme'],
+    package_data={'sphinx_redactor_theme': [
         'theme.conf',
         '*.html',
         'static/css/*.css',
