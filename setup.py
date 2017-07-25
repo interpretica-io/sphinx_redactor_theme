@@ -5,7 +5,7 @@ from sphinx_redactor_theme import __version__
 
 setup(
     name='sphinx_redactor_theme',
-    version='0.0.1',
+    version='0.0.2.dev0',
     url='https://github.com/testthedocs/sphinx_redactor_theme',
     license='MIT',
     author='TestTheDocs Community',
