@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup
-from sphinx_ttd_theme import __version__
+from sphinx_redactor_theme import __version__
 
 
 setup(

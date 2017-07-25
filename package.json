@@ -2,7 +2,7 @@
   "name": "jast",
   "repository": "",
   "version": "0.0.1",
-  "description": "jast is just another sphinx theme",
+  "description": "redactor is just another sphinx theme",
   "author": "carloratm",
   "private": true,
   "devDependencies": {

@@ -1,9 +1,9 @@
 include *.txt
-recursive-include jast *.conf
-recursive-include jast *.css
-recursive-include jast *.eot
-recursive-include jast *.html
-recursive-include jast *.js
-recursive-include jast *.svg
-recursive-include jast *.ttf
-recursive-include jast *.woff
+recursive-include sphinx_redactor_theme *.conf
+recursive-include sphinx_redactor_theme *.css
+recursive-include sphinx_redactor_theme *.eot
+recursive-include sphinx_redactor_theme *.html
+recursive-include sphinx_redactor_theme *.js
+recursive-include sphinx_redactor_theme *.svg
+recursive-include sphinx_redactor_theme *.ttf
+recursive-include sphinx_redactor_theme *.woff

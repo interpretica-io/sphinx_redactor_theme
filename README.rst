@@ -1,12 +1,9 @@
-.. image:: scrot.jpg
-    :width: 100%
-
 Installation
 ============
 
 To install this theme, run::
 
-    pip install jast
+    pip install sphinx_redactor_theme
 
 
 Usage
@@ -14,9 +11,9 @@ Usage
 
 To use this theme, add to your docs ``conf.py``::
 
-    import jast
-    html_theme = 'jast'
-    html_theme_path = [jast.get_html_theme_path()]
+    import sphinx_redactor_theme
+    html_theme = 'sphinx_redactor_theme'
+    html_theme_path = [sphinx_redactor_theme.get_html_theme_path()]
 
 
 Configuration

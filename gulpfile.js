@@ -14,7 +14,7 @@ const autoprefixer = require('gulp-autoprefixer');
 
 const src_dir = __dirname + '/demo_docs/';
 const dist_dir = src_dir + 'build/html/';
-const theme_dir = __dirname + '/jast/';
+const theme_dir = __dirname + '/sphinx_redactor_theme/';
 const static_dir = theme_dir + 'static/';
 
 const paths = {
@@ -31,7 +31,7 @@ const patterns = {
     paths.sass + '**/*.scss'
   ],
   'css': [
-    paths.css + 'jast.css',
+    paths.css + 'redactor.css',
   ],
   'js': [
     paths.js + '*.js',
