@@ -7,60 +7,16 @@ Demo Docs
 =================================================
 
 :Page Status: Incomplete
-:Last Reviewed: 2016-09-29
+:Last Reviewed: 2017-07-25
 
 Contents:
 
 .. toctree::
     :maxdepth: 2
-    :caption: Sweet Docs
+    :caption: Overview
 
     demo
-    list
 
-.. toctree::
-    :titlesonly:
-
-    toc
-
-.. toctree::
-    :maxdepth: 2
-    :caption: This is an incredibly long caption for a long menu
-
-    long
-    api
-
-Maaaaath!
-=========
-
-This is a test.  Here is an equation:
-:math:`X_{0:5} = (X_0, X_1, X_2, X_3, X_4)`.
-Here is another:
-
-.. math::
-
-    \nabla^2 f =
-    \frac{1}{r^2} \frac{\partial}{\partial r}
-    \left( r^2 \frac{\partial f}{\partial r} \right) +
-    \frac{1}{r^2 \sin \theta} \frac{\partial f}{\partial \theta}
-    \left( \sin \theta \, \frac{\partial f}{\partial \theta} \right) +
-    \frac{1}{r^2 \sin^2\theta} \frac{\partial^2 f}{\partial \phi^2}
-
-
-Giant tables
-============
-
-+------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+
-| Header 1   | Header 2   | Header 3  | Header 1   | Header 2   | Header 3  | Header 1   | Header 2   | Header 3  | Header 1   | Header 2   | Header 3  |
-+============+============+===========+============+============+===========+============+============+===========+============+============+===========+
-| body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  |
-+------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+
-| body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  |
-+------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+
-| body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  |
-+------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+
-| body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  | body row 1 | column 2   | column 3  |
-+------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+
 
 Optional parameter args
 -----------------------
