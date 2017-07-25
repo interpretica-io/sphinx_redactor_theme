@@ -1,2 +1,17 @@
 recursive-include sphinx_redactor_theme *
 recursive-include docs *
+global-exclude *.pyc .Python .python-version pip-selfcheck.json .DS_Store
+recursive-include demo_docs *.jpg
+recursive-include demo_docs *.png
+recursive-include demo_docs *.py
+recursive-include demo_docs *.rst
+recursive-include demo_docs Makefile
+recursive-include js *.js
+recursive-include sass *.scss
+include *.bak
+include *.js
+include *.json
+include *.rst
+include *.yml
+include LICENSE
+include tox.ini
