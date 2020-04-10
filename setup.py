@@ -14,13 +14,20 @@ setup(
     long_description=open('README.rst').read(),
     zip_safe=False,
     packages=['sphinx_redactor_theme'],
-    package_data={'sphinx_redactor_theme': [
-        'theme.conf',
-        '*.html',
-        'static/css/*.css',
-        'static/js/*.js',
-        'static/font/*.*'
-    ]},
+    package_data={
+        'sphinx_redactor_theme': [
+            'theme.conf',
+            '*.html',
+            'static/css/*.css',
+            'static/js/*.js',
+            'static/font/*.*'
+        ]
+    },
+    entry_points={
+        'sphinx.html_themes': [
+            'sphinx_redactor_theme = sphinx_redactor_theme',
+        ]
+    },
     include_package_data=True,
     classifiers=[
         'Development Status :: 3 - Alpha',
