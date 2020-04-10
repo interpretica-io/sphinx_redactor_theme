@@ -6343,11 +6343,11 @@ a {
 }
 
 a:hover {
-    color: #b80d57
+    color: #de317c
 }
 
 .site-content a:hover .literal {
-    color: #b80d57
+    color: #de317c
 }
 
 .site-content a .literal {
@@ -6649,7 +6649,8 @@ li {
 
 .site-sidebar a:hover {
     background: #ebebeb;
-    text-decoration: none
+    text-decoration: none;
+    color: #de317c
 }
 
 .branding-link {
@@ -6686,7 +6687,7 @@ li {
 
 .site-searchform [type=text]:focus {
     box-shadow: 0 0 4px 0 rgba(184, 13, 87, 0.4);
-    border-color: #b80d57
+    border-color: #de317c
 }
 
 *+.site-nav {
@@ -6849,7 +6850,7 @@ li {
     background: #f8f8f8;
     padding: 15px 20px;
     margin-bottom: 20px;
-    color: #b80d57;
+    color: #de317c;
     letter-spacing: .5px
 }
 
