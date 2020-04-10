@@ -6794,7 +6794,8 @@ li {
 
 .field-list {
     font-size: 13px;
-    font-size: .8125rem
+    font-size: .8125rem;
+    width: 100%;
 }
 
 .field-list th, .field-list td {
