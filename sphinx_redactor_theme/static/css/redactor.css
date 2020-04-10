@@ -6491,11 +6491,10 @@ thead tr+tr th {
 }
 
 td, th {
-    padding: 15px 20px;
-    line-height: 1;
+    padding: 10px 15px;
     word-wrap: break-word;
     vertical-align: bottom;
-    white-space: nowrap
+    white-space: default
 }
 
 th {
