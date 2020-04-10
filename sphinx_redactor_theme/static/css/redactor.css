@@ -6635,7 +6635,7 @@ li {
 
 .site-sidebar {
     background: #f8f8f8;
-    padding: 40px 5%;
+    padding: 40px 2%;
     float: left;
     width: 20%
 }
@@ -6656,7 +6656,8 @@ li {
     transition: background .2s, color .2s;
     display: block;
     text-decoration: none;
-    padding: 20px
+    padding: 20px;
+    font-size: 1.5rem
 }
 
 .branding-link__version {
@@ -7162,11 +7163,11 @@ table [class^='highlight'] {
 @media only screen and (max-width: 1200px) {
     .site-main {
         width: 70%;
-        padding: 40px 5%
+        padding: 40px 2%
     }
     .site-sidebar {
         width: 30%;
-        padding: 40px 5%
+        padding: 40px 2%
     }
 }
 
