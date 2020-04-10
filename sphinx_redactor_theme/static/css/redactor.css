@@ -6960,7 +6960,8 @@ table [class^='highlight'] {
     border-style: solid;
     border-width: 2px;
     padding: 20px 20px 20px 60px;
-    position: relative
+    position: relative;
+    margin-bottom: 10px;
 }
 
 .admonition .admonition-title {
@@ -6968,6 +6969,13 @@ table [class^='highlight'] {
     top: 20px;
     left: 18px;
     font-size: 0
+}
+
+.admonition.seealso .admonition-title {
+    font-size: 1rem;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .admonition .admonition-title:before {
@@ -6985,6 +6993,12 @@ table [class^='highlight'] {
 .admonition.tip .admonition-title:before, .admonition.hint .admonition-title:before, .admonition.important .admonition-title:before {
     content: "\F2FC";
     color: #139a43
+}
+
+.admonition.seealso {
+    border-color: #E4F3FE;
+    background-color: #E4F3FE;
+    padding: 10px;
 }
 
 .admonition.note {
