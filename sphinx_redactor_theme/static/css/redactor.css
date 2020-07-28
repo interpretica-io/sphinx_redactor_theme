@@ -6646,6 +6646,10 @@ li {
     width: 20%;
 }
 
+.site-sidebar img {
+    width: 100%;
+}
+
 .site-sidebar a {
     transition: background .2s;
     text-decoration: none;
