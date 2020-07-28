@@ -6505,7 +6505,7 @@ td, th {
 }
 
 th {
-    background: #0099E5;
+    background: #0000C8;
     color: #fff;
     font-weight: 700
 }
@@ -6925,6 +6925,10 @@ table [class^='highlight'] {
     background: #f8f8f8;
     padding: 4px;
     color: #000
+}
+
+.docutils.literal.notranslate {
+    background: none;
 }
 
 .highlighted {
