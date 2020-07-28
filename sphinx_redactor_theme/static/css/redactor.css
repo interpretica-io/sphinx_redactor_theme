@@ -6399,7 +6399,7 @@ sup {
 }
 
 h1, h2, h3, h4, h5, .site-content .topic-title, .toctree-wrapper .caption, .auto-toc .caption {
-    font-family: "Roboto Slab", "ff-tisa-web-pro", "Georgia", Arial, sans-serif;
+    font-family: "Open Sans", "Roboto Slab", "ff-tisa-web-pro", "Georgia", Arial, sans-serif;
     position: relative;
     background: #fff;
     word-wrap: normal;
