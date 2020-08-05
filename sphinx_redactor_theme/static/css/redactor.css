@@ -6938,9 +6938,10 @@ table [class^='highlight'] {
 }
 
 .highlighted {
-    background: transparent;
+    background: #0000C8;
+    color: #FFFFFF;
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
-    padding: 0 2px
+    padding: 0 4px
 }
 
 .site-content .sidebar {
