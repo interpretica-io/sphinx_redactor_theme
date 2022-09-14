@@ -11,7 +11,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 14px;
     font: inherit;
     vertical-align: baseline
 }
@@ -6318,6 +6318,7 @@ table {
 }
 
 .jast-responsive-table {
+    padding-top: 10px;
     padding-bottom: 10px;
     overflow-x: auto
 }
@@ -6405,14 +6406,16 @@ sup {
 }
 
 h1, h2, h3, h4, h5, .site-content .topic-title, .toctree-wrapper .caption, .auto-toc .caption {
-    font-family: "Open Sans", "Roboto Slab", "ff-tisa-web-pro", "Georgia", Arial, sans-serif;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serifbody, "Open Sans", "Roboto Slab", "ff-tisa-web-pro", "Georgia", Arial, sans-serif;
     position: relative;
     background: #fff;
     word-wrap: normal;
     overflow: hidden;
     overflow-wrap: normal;
     font-weight: 700;
-    line-height: 1.2
+    line-height: 1.2;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .caption {
@@ -6488,7 +6491,7 @@ table {
     text-align: left;
     border-radius: 8px;
     background: #f8f8f8;
-    overflow: hidden
+    overflow: hidden;
 }
 
 table .row-odd td {
